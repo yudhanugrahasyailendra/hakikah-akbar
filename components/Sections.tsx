@@ -48,7 +48,7 @@ export function Couple() {
               alt={couple.bride.full}
               fill
               sizes="(max-width: 480px) 70vw, 280px"
-              style={{ objectPosition: "50% 8%" }}
+              style={{ objectPosition: "50% 0%" }}
             />
           </div>
         </div>
