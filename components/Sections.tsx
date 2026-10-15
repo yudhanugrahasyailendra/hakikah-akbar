@@ -53,6 +53,7 @@ export function Couple() {
           </div>
         </div>
         <h3>{couple.bride.full}</h3>
+        <p>({couple.bride.parents})</p>
       </div>
       <div className="amp">dengan</div>
       <div className="person reveal">
