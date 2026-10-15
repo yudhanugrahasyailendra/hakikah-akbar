@@ -875,7 +875,9 @@ nav.bottom-nav a:hover {
   border-radius: 4px;
   box-shadow: 0 10px 22px rgba(110, 20, 35, 0.22);
 }
-.shot:nth-child(1) {
+.shot:nth-child(1),
+/* foto terakhir melebar bila akan sendirian di baris terakhir */
+.shot:last-child:nth-child(even) {
   grid-column: span 2;
   aspect-ratio: 4 / 3;
 }

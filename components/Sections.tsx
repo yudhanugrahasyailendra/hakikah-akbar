@@ -50,10 +50,11 @@ export function Couple() {
         <div className="arch">
           <div className="arch-img">
             <Image
-              src="/media/Hakikah 2.jpeg"
+              src="/media/Hakikah 222.jpeg"
               alt={couple.bride.full}
               fill
               sizes="(max-width: 480px) 70vw, 280px"
+              style={{ objectPosition: "50% 8%" }}
             />
           </div>
         </div>
@@ -64,10 +65,11 @@ export function Couple() {
         <div className="arch">
           <div className="arch-img">
             <Image
-              src="/media/Akbar 1.jpeg"
+              src="/media/Akbar 111.jpeg"
               alt={couple.groom.full}
               fill
               sizes="(max-width: 480px) 70vw, 280px"
+              style={{ objectPosition: "50% 0%" }}
             />
           </div>
         </div>

@@ -51,9 +51,9 @@ export const invitation = {
   },
   // Semua foto dari public/media/gallery. `pos` = titik fokus crop.
   gallery: [
+    { src: "/media/gallery/g3.jpeg", alt: "Foto prewedding Ikha & Akbar 3", pos: "50% 30%" },
     { src: "/media/gallery/g1.jpeg", alt: "Foto prewedding Ikha & Akbar 1", pos: "50% 30%" },
     { src: "/media/gallery/g2.jpeg", alt: "Foto prewedding Ikha & Akbar 2", pos: "50% 30%" },
-    { src: "/media/gallery/g3.jpeg", alt: "Foto prewedding Ikha & Akbar 3", pos: "50% 30%" },
     { src: "/media/gallery/g4.jpeg", alt: "Foto prewedding Ikha & Akbar 4", pos: "50% 30%" },
     { src: "/media/gallery/g5.jpeg", alt: "Foto prewedding Ikha & Akbar 5", pos: "50% 30%" },
     { src: "/media/gallery/g6.jpeg", alt: "Foto prewedding Ikha & Akbar 6", pos: "50% 30%" },
