@@ -40,7 +40,7 @@ export const invitation = {
     ],
     salam: "Wassalamu Alaikum Warahmatullahi Wabarakatuh",
   },
-  hosts: ["Tabara Dg. Maling", "Sahariah Dg. Baji"],
+  hosts: ["Marulam L. Tobing", "Mardiana Malik"],
   alsoInviting: [
 
   ],
@@ -65,8 +65,7 @@ export const invitation = {
     note: "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, dapat melalui rekening berikut:",
     // TODO: ganti dengan data rekening asli dari client
     accounts: [
-      { bank: "BRI", number: "1234567890", name: "Hakikah Dg. Tinggong" },
-      { bank: "BCA", number: "0987654321", name: "Akbar Pardamean Lumban Tobing" },
+      { bank: "BCA", number: "8735065391", name: "Akbar Pardamean L T SE" },
     ],
   },
   features: { loveStory: false, gift: false, gallery: false },
