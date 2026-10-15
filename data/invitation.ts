@@ -42,26 +42,30 @@ export const invitation = {
   },
   hosts: ["Tabara Dg. Maling", "Sahariah Dg. Baji"],
   alsoInviting: [
-    { name: "Hasdar Dg. Ta'le" },
-    { name: "St. Zaenab Dg. Te'ne" },
-    { name: "Jamaluddin H. Gaffar Dg. Lallo" },
-    { name: "Pelda Syahrul Dg. Tika", note: "Zidam XIV/HSN" },
-    { name: "Hasri, S.Kep.Ns Dg. Malengu" },
-    { name: "Sirajuddin Dg. Bantang" },
-    { name: "Sunardi, S.Kep Dg. Jarre" },
-    { name: "Kamaruddin Dg. Sitakka", note: "Imdes Manjapai" },
-    { name: "Ikrar Dg. Janji", note: "Kadus Kaluarrang" },
-    { name: "Mukhtar Luthfi, S.E Dg. Gassing", note: "Imdus Kaluarrang" },
-    { name: "Tallasa Dg. Rani" },
-    { name: "Muh. Ali Dg. Rombo" },
-    { name: "K. Dg. Sutte" },
-    { name: "Romba Dg. Sakking" },
-    { name: "Bahtiar Dg. Ngawing" },
+
   ],
   media: {
     video: "/media/opening.mp4",
     poster: "/media/opening-poster.jpg",
-    music: "", // TODO: file audio dari client, mis. "/media/musik.mp3"
+    music: "/media/Sheila On 7 - Hingga Ujung Waktu.mp3",
+  },
+  // 6 slot galeri. `pos` = titik fokus crop (object-position).
+  // TODO: ganti dengan foto prewedding lain dari client bila sudah ada
+  gallery: [
+    { src: "/media/Hakikah-Akbar 1.jpeg", alt: "Ikha & Akbar", pos: "50% 40%" },
+    { src: "/media/Hakikah Akbar 2.jpeg", alt: "Ikha & Akbar", pos: "50% 40%" },
+    { src: "/media/Hakikah 2.jpeg", alt: "Ikha", pos: "50% 25%" },
+    { src: "/media/Akbar 1.jpeg", alt: "Akbar", pos: "50% 25%" },
+    { src: "/media/Hakikah-Akbar 1.jpeg", alt: "Ikha & Akbar", pos: "50% 100%" },
+    { src: "/media/Hakikah Akbar 2.jpeg", alt: "Ikha & Akbar", pos: "70% 55%" },
+  ],
+  gift: {
+    note: "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, dapat melalui rekening berikut:",
+    // TODO: ganti dengan data rekening asli dari client
+    accounts: [
+      { bank: "BRI", number: "1234567890", name: "Hakikah Dg. Tinggong" },
+      { bank: "BCA", number: "0987654321", name: "Akbar Pardamean Lumban Tobing" },
+    ],
   },
   features: { loveStory: false, gift: false, gallery: false },
 };

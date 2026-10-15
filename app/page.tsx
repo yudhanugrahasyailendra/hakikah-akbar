@@ -2,6 +2,8 @@ import Invitation from "@/components/Invitation";
 import {
   Couple,
   Footer,
+  GallerySection,
+  GiftSection,
   Hero,
   InvitedBy,
   RsvpSection,
@@ -14,6 +16,8 @@ export default function Home() {
       <Hero />
       <Couple />
       <SaveTheDate />
+      <GallerySection />
+      <GiftSection />
       <RsvpSection />
       <InvitedBy />
       <Footer />

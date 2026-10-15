@@ -11,8 +11,9 @@ const NAV = [
   { href: "#top", icon: "🏠", label: "Awal" },
   { href: "#mempelai", icon: "👫", label: "Mempelai" },
   { href: "#date", icon: "📅", label: "Acara" },
+  { href: "#gallery", icon: "📸", label: "Galeri" },
+  { href: "#gift", icon: "🎁", label: "Hadiah" },
   { href: "#rsvp", icon: "💌", label: "Ucapan" },
-  { href: "#invite", icon: "👪", label: "Turut mengundang" },
 ];
 
 export default function Invitation({ children }: { children: React.ReactNode }) {
@@ -21,7 +22,6 @@ export default function Invitation({ children }: { children: React.ReactNode }) 
     useSyncExternalStore(noopSubscribe, getGuest, () => "") || "Tamu Undangan";
 
   const [open, setOpen] = useState(false);
-  const [soundOn, setSoundOn] = useState(false);
   const [musicOn, setMusicOn] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -68,14 +68,6 @@ export default function Invitation({ children }: { children: React.ReactNode }) 
     setTimeout(() => videoRef.current?.pause(), 1100);
   }
 
-  function toggleSound() {
-    const v = videoRef.current;
-    if (!v) return;
-    v.muted = !v.muted;
-    setSoundOn(!v.muted);
-    if (v.paused) v.play().catch(() => {});
-  }
-
   function toggleMusic() {
     const a = audioRef.current;
     if (!a) return;
@@ -106,14 +98,6 @@ export default function Invitation({ children }: { children: React.ReactNode }) 
         />
         <div className="shade" />
         <div className="frame" />
-        <button
-          className="sound"
-          type="button"
-          onClick={toggleSound}
-          aria-label={soundOn ? "Matikan suara" : "Nyalakan suara"}
-        >
-          {soundOn ? "🔊" : "🔇"}
-        </button>
         <div className="content">
           <div className="top">
             <div className="eyebrow">The Wedding Of</div>

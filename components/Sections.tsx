@@ -1,20 +1,34 @@
+import Image from "next/image";
 import { invitation } from "@/data/invitation";
 import Countdown from "./Countdown";
 import CalendarButton from "./CalendarButton";
 import Rsvp from "./Rsvp";
+import Gallery from "./Gallery";
+import Gift from "./Gift";
 
-const { couple, event, opening, intro, closing, hosts, alsoInviting } =
+const { couple, event, opening, intro, closing, hosts } =
   invitation;
 
 export function Hero() {
   return (
     <section id="hero" className="sec">
+      <video
+        className="hero-video"
+        src="/media/Video Pengantin.mp4"
+        muted
+        loop
+        playsInline
+        autoPlay
+        preload="auto"
+        aria-hidden="true"
+      />
       <div className="eyebrow">The Wedding Of</div>
       <h1>
         {couple.bride.nick}
         <span className="script">&amp;</span>
         {couple.groom.nick}
       </h1>
+      <div className="hero-line" />
       <div className="date">{event.dateLabel}</div>
       <div className="scroll">SCROLL ↓</div>
     </section>
@@ -31,10 +45,30 @@ export function Couple() {
       <h2 className="title">Mempelai</h2>
 
       <div className="person reveal">
+        <div className="arch">
+          <div className="arch-img">
+            <Image
+              src="/media/Hakikah 2.jpeg"
+              alt={couple.bride.full}
+              fill
+              sizes="(max-width: 480px) 70vw, 280px"
+            />
+          </div>
+        </div>
         <h3>{couple.bride.full}</h3>
       </div>
       <div className="amp">dengan</div>
       <div className="person reveal">
+        <div className="arch">
+          <div className="arch-img">
+            <Image
+              src="/media/Akbar 1.jpeg"
+              alt={couple.groom.full}
+              fill
+              sizes="(max-width: 480px) 70vw, 280px"
+            />
+          </div>
+        </div>
         <h3>{couple.groom.full}</h3>
         <p>({couple.groom.parents})</p>
       </div>
@@ -78,6 +112,28 @@ export function SaveTheDate() {
   );
 }
 
+export function GallerySection() {
+  return (
+    <section id="gallery" className="sec alt">
+      <div className="eyebrow">Our Moments</div>
+      <h2 className="title">Galeri Prewedding</h2>
+      <div className="divider" />
+      <Gallery />
+    </section>
+  );
+}
+
+export function GiftSection() {
+  return (
+    <section id="gift" className="sec">
+      <div className="eyebrow">Wedding Gift</div>
+      <h2 className="title">Tanda Kasih</h2>
+      <div className="divider" />
+      <Gift />
+    </section>
+  );
+}
+
 export function RsvpSection() {
   return (
     <section id="rsvp" className="sec">
@@ -98,17 +154,7 @@ export function InvitedBy() {
       <div className="eyebrow">Hormat kami yang mengundang</div>
       <p className="hosts">{hosts.join(" & ")}</p>
 
-      <h2 className="title" style={{ marginTop: 40 }}>
-        Turut Mengundang
-      </h2>
-      <ol className="invite-grid">
-        {alsoInviting.map((g) => (
-          <li key={g.name}>
-            {g.name}
-            {"note" in g && <small>({g.note})</small>}
-          </li>
-        ))}
-      </ol>
+
     </section>
   );
 }
@@ -120,11 +166,6 @@ export function Footer() {
         Terima Kasih
       </div>
       <div className="script">{couple.monogram}</div>
-      <p style={{ margin: "10px 0 0" }}>
-        Hormat kami yang mengundang:
-        <br />
-        {hosts.join(" & ")}
-      </p>
     </footer>
   );
 }
