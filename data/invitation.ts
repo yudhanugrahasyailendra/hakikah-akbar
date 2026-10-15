@@ -1,6 +1,8 @@
 export const invitation = {
   couple: {
-    bride: { full: "Hakikah Dg. Tinggong", nick: "Ikha" },
+    bride: { full: "Hakikah Dg. Tinggong", nick: "Ikha", 
+      parents: "Putri Pertama dari Tabara Dg Maling & Sahariah Dg. Baji",
+    },
     groom: {
       full: "Akbar Pardamean Lumban Tobing, S.E Dg. Malik",
       nick: "Akbar",
