@@ -41,9 +41,7 @@ export const invitation = {
     salam: "Wassalamu Alaikum Warahmatullahi Wabarakatuh",
   },
   hosts: ["Marulam L. Tobing", "Mardiana Malik"],
-  alsoInviting: [
-
-  ],
+  alsoInviting: [],
   media: {
     video: "/media/opening.mp4",
     poster: "/media/opening-poster.jpg",
@@ -51,15 +49,63 @@ export const invitation = {
   },
   // Semua foto dari public/media/gallery. `pos` = titik fokus crop.
   gallery: [
-    { src: "/media/gallery/g3.jpeg", alt: "Foto prewedding Ikha & Akbar 3", pos: "50% 30%" },
-    { src: "/media/gallery/g1.jpeg", alt: "Foto prewedding Ikha & Akbar 1", pos: "50% 30%" },
-    { src: "/media/gallery/g2.jpeg", alt: "Foto prewedding Ikha & Akbar 2", pos: "50% 30%" },
-    { src: "/media/gallery/g4.jpeg", alt: "Foto prewedding Ikha & Akbar 4", pos: "50% 30%" },
-    { src: "/media/gallery/g5.jpeg", alt: "Foto prewedding Ikha & Akbar 5", pos: "50% 30%" },
-    { src: "/media/gallery/g6.jpeg", alt: "Foto prewedding Ikha & Akbar 6", pos: "50% 30%" },
-    { src: "/media/gallery/g7.jpeg", alt: "Foto prewedding Ikha & Akbar 7", pos: "50% 30%" },
-    { src: "/media/gallery/g8.jpeg", alt: "Foto prewedding Ikha & Akbar 8", pos: "50% 30%" },
-    { src: "/media/gallery/g9.jpeg", alt: "Foto prewedding Ikha & Akbar 9", pos: "50% 30%" },
+    {
+      src: "/media/gallery/g3.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 3",
+      pos: "50% 30%",
+    },
+    {
+      src: "/media/gallery/g2.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 2",
+      pos: "50% 30%",
+    },
+
+    {
+      src: "/media/gallery/g8.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 8",
+      pos: "50% 30%",
+    },
+    {
+      src: "/media/gallery/g9.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 9",
+      pos: "50% 30%",
+    },
+    {
+      src: "/media/gallery/g10.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 10",
+      pos: "50% 30%",
+    },
+    {
+      src: "/media/gallery/g11.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 11",
+      pos: "50% 30%",
+    },
+    {
+      src: "/media/gallery/g12.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 12",
+      pos: "50% 30%",
+    },
+    {
+      src: "/media/gallery/g13.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 13",
+      pos: "50% 30%",
+    },
+    {
+      src: "/media/gallery/g14.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 14",
+      pos: "50% 30%",
+    },
+
+    {
+      src: "/media/gallery/g7.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 7",
+      pos: "50% 30%",
+    },
+    {
+      src: "/media/gallery/g1.jpeg",
+      alt: "Foto prewedding Ikha & Akbar 1",
+      pos: "50% 30%",
+    },
   ],
   gift: {
     note: "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, dapat melalui rekening berikut:",

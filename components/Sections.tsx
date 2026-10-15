@@ -14,7 +14,7 @@ export function Hero() {
     <section id="hero" className="sec">
       <video
         className="hero-video"
-        src="/media/Video Pengantin.mp4"
+        src="/media/Ikha Akbar New  .mp4"
         muted
         loop
         playsInline
