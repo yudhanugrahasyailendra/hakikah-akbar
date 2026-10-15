@@ -118,8 +118,13 @@ export function GallerySection() {
   return (
     <section id="gallery" className="sec alt">
       <div className="eyebrow">Our Moments</div>
-      <h2 className="title">Galeri Prewedding</h2>
+      <h2 className="title">Potret Cerita Kami</h2>
       <div className="divider" />
+      <p className="quote reveal" style={{ marginBottom: 28 }}>
+        Setiap senyum, setiap tatap, dan setiap langkah menuju hari bahagia ini
+        adalah doa yang Allah jawab dengan indah. Inilah sepotong kisah kami
+        yang ingin kami bagikan kepada Anda.
+      </p>
       <Gallery />
     </section>
   );
