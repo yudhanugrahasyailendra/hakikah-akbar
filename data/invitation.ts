@@ -89,16 +89,16 @@ export const invitation = {
       pos: "50% 30%",
     },
 
-    {
-      src: "/media/gallery/g7.jpeg",
-      alt: "Foto prewedding Ikha & Akbar 7",
-      pos: "50% 30%",
-    },
-    {
-      src: "/media/gallery/g1.jpeg",
-      alt: "Foto prewedding Ikha & Akbar 1",
-      pos: "50% 30%",
-    },
+    // {
+    //   src: "/media/gallery/g7.jpeg",
+    //   alt: "Foto prewedding Ikha & Akbar 7",
+    //   pos: "50% 30%",
+    // },
+    // {
+    //   src: "/media/gallery/g1.jpeg",
+    //   alt: "Foto prewedding Ikha & Akbar 1",
+    //   pos: "50% 30%",
+    // },
   ],
   gift: {
     note: "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, dapat melalui rekening berikut:",
