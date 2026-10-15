@@ -45,7 +45,7 @@ export const invitation = {
   hosts: ["Marulam L. Tobing", "Mardiana Malik"],
   alsoInviting: [],
   media: {
-    video: "/media/opening.mp4",
+    video: "/media/opening video.mp4",
     poster: "/media/opening-poster.jpg",
     music: "/media/Sheila On 7 - Hingga Ujung Waktu.mp3",
   },
