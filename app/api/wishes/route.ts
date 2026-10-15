@@ -9,7 +9,12 @@ import {
 
 export async function GET(request: Request) {
   void request.url; // route dinamis, jangan di-prerender
-  return Response.json(await listWishes());
+  try {
+    return Response.json(await listWishes());
+  } catch (e) {
+    console.error("listWishes gagal", e);
+    return Response.json({ error: "Gagal memuat ucapan." }, { status: 500 });
+  }
 }
 
 export async function POST(request: Request) {
@@ -46,10 +51,18 @@ export async function POST(request: Request) {
     );
   }
 
-  const wish = await addWish({
-    name: cleanName,
-    status: status as WishStatus,
-    message: cleanMsg,
-  });
-  return Response.json(wish, { status: 201 });
+  try {
+    const wish = await addWish({
+      name: cleanName,
+      status: status as WishStatus,
+      message: cleanMsg,
+    });
+    return Response.json(wish, { status: 201 });
+  } catch (e) {
+    console.error("addWish gagal", e);
+    return Response.json(
+      { error: "Gagal menyimpan ucapan, coba lagi." },
+      { status: 500 },
+    );
+  }
 }

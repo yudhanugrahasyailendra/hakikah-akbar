@@ -1,6 +1,5 @@
-// Penyimpanan ucapan sementara (in-memory, hilang saat server restart / cold start).
-// TODO produksi: ganti dengan Supabase / Vercel Postgres / KV (tabel `wishes`:
-// id, name, status, message, created_at). Cukup ubah isi `listWishes` & `addWish`.
+// Penyimpanan ucapan di Supabase (tabel `wishes`: id, name, status, message, created_at).
+import { supabase } from "@/lib/supabase";
 
 export const WISH_STATUSES = ["Hadir", "Ragu", "Tidak Hadir"] as const;
 export type WishStatus = (typeof WISH_STATUSES)[number];
@@ -16,26 +15,46 @@ export type Wish = {
 export const LIMITS = { name: 60, message: 500 } as const;
 
 const store = globalThis as unknown as {
-  __wishes?: Wish[];
   __wishHits?: Map<string, number[]>;
 };
-const wishes = (store.__wishes ??= []);
 const hits: Map<string, number[]> = (store.__wishHits ??= new Map());
 
+type WishRow = {
+  id: string;
+  name: string;
+  status: WishStatus;
+  message: string;
+  created_at: string;
+};
+
+const toWish = (r: WishRow): Wish => ({
+  id: r.id,
+  name: r.name,
+  status: r.status,
+  message: r.message,
+  createdAt: r.created_at,
+});
+
 export async function listWishes(): Promise<Wish[]> {
-  return wishes.slice(0, 200);
+  const { data, error } = await supabase()
+    .from("wishes")
+    .select("id,name,status,message,created_at")
+    .order("created_at", { ascending: false })
+    .limit(200);
+  if (error) throw error;
+  return (data as WishRow[]).map(toWish);
 }
 
 export async function addWish(
   input: Pick<Wish, "name" | "status" | "message">,
 ): Promise<Wish> {
-  const wish: Wish = {
-    id: crypto.randomUUID(),
-    ...input,
-    createdAt: new Date().toISOString(),
-  };
-  wishes.unshift(wish);
-  return wish;
+  const { data, error } = await supabase()
+    .from("wishes")
+    .insert(input)
+    .select("id,name,status,message,created_at")
+    .single();
+  if (error) throw error;
+  return toWish(data as WishRow);
 }
 
 /** Maks. 5 kiriman per menit per IP. */

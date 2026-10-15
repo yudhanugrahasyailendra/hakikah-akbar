@@ -5,7 +5,7 @@ import { invitation } from "@/data/invitation";
 
 const noopSubscribe = () => () => {};
 const getGuest = () =>
-  new URLSearchParams(window.location.search).get("to")?.trim() ?? "";
+  new URLSearchParams(window.location.search).get("to")?.trim().slice(0, 60) ?? "";
 
 const NAV = [
   { href: "#top", icon: "🏠", label: "Awal" },
