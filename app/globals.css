@@ -818,32 +818,42 @@ footer.foot .script {
 }
 nav.bottom-nav {
   position: fixed;
-  bottom: 12px;
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 40;
   display: flex;
-  gap: 4px;
-  background: rgba(255, 253, 250, 0.95);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--line);
+  gap: 2px;
+  background: rgba(30, 6, 12, 0.28);
+  backdrop-filter: blur(10px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+  border: 1px solid rgba(242, 220, 174, 0.55);
   border-radius: 40px;
   padding: 6px 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 nav.bottom-nav a {
-  width: 40px;
-  height: 36px;
+  width: 42px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
   text-decoration: none;
-  font-size: 16px;
-  color: var(--accent-d);
+  color: #f2dcae;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.55));
+  transition:
+    background 0.25s,
+    color 0.25s,
+    transform 0.25s;
 }
-nav.bottom-nav a:hover {
-  background: var(--bg2);
+nav.bottom-nav a:hover,
+nav.bottom-nav a:focus-visible {
+  background: rgba(242, 220, 174, 0.2);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 @media (prefers-reduced-motion: reduce) {
