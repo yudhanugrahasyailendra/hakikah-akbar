@@ -363,46 +363,34 @@ section.alt .divider::after {
 
 /* HERO */
 #hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
+  padding: 0;
   color: #fff;
-  padding-bottom: 80px;
   overflow: hidden;
-  background: linear-gradient(135deg, #8c1c2c, #c9a27a);
+  background: #2a0a10;
 }
+/* video tampil utuh: tinggi section mengikuti rasio video */
 #hero .hero-video {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 60vh;
   object-fit: cover;
-  z-index: 0;
-  animation: heroZoom 24s ease-in-out infinite alternate;
 }
-@keyframes heroZoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.12);
-  }
-}
-/* overlay: gradient + vignette */
+/* overlay hanya di bagian bawah supaya video tetap jelas */
 #hero::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background:
-    radial-gradient(ellipse at center, transparent 45%, rgba(30, 5, 10, 0.55)),
-    linear-gradient(
-      180deg,
-      rgba(60, 12, 20, 0.35),
-      rgba(60, 12, 20, 0.15) 35%,
-      rgba(60, 12, 20, 0.88)
-    );
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(40, 8, 14, 0.15) 0%,
+    transparent 30%,
+    transparent 50%,
+    rgba(40, 8, 14, 0.85) 100%
+  );
 }
 /* gold inner frame */
 #hero::after {
@@ -415,9 +403,13 @@ section.alt .divider::after {
   outline-offset: 5px;
   pointer-events: none;
 }
-#hero > *:not(.hero-video) {
-  position: relative;
+#hero .hero-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 3;
+  padding: 0 28px 84px;
 }
 #hero .eyebrow {
   color: #f0e0cf;
@@ -484,7 +476,6 @@ section.alt .divider::after {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  #hero .hero-video,
   #hero .eyebrow,
   #hero h1,
   #hero .script,

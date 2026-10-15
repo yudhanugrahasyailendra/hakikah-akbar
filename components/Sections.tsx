@@ -22,15 +22,17 @@ export function Hero() {
         preload="auto"
         aria-hidden="true"
       />
-      <div className="eyebrow">The Wedding Of</div>
-      <h1>
-        {couple.bride.nick}
-        <span className="script">&amp;</span>
-        {couple.groom.nick}
-      </h1>
-      <div className="hero-line" />
-      <div className="date">{event.dateLabel}</div>
-      <div className="scroll">SCROLL ↓</div>
+      <div className="hero-content">
+        <div className="eyebrow">The Wedding Of</div>
+        <h1>
+          {couple.bride.nick}
+          <span className="script">&amp;</span>
+          {couple.groom.nick}
+        </h1>
+        <div className="hero-line" />
+        <div className="date">{event.dateLabel}</div>
+        <div className="scroll">SCROLL ↓</div>
+      </div>
     </section>
   );
 }
