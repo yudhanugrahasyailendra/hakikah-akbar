@@ -99,23 +99,18 @@ export default function Invitation({ children }: { children: React.ReactNode }) 
         <div className="shade" />
         <div className="frame" />
         <div className="content">
-          <div className="top">
-            <div className="eyebrow">The Wedding Of</div>
-            <h1>
-              {couple.bride.nick}{" "}
-              <span className="script" style={{ fontSize: 40 }}>
-                &amp;
-              </span>{" "}
-              {couple.groom.nick}
-            </h1>
-            <div className="date">{event.dateLabel}</div>
-          </div>
-          <div className="bottom">
-            <p className="to">Kepada Yth. Bapak/Ibu/Saudara/i</p>
-            <p className="guest">{guest}</p>
-            <button className="btn" type="button" onClick={handleOpen}>
-              ✉ Buka Undangan
-            </button>
+          <div className="lower">
+            <div className="top">
+              <div className="eyebrow">The Wedding Of</div>
+              <div className="date">{event.dateLabel}</div>
+            </div>
+            <div className="bottom">
+              <p className="to">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+              <p className="guest">{guest}</p>
+              <button className="btn" type="button" onClick={handleOpen}>
+                ✉ Buka Undangan
+              </button>
+            </div>
           </div>
         </div>
       </div>
