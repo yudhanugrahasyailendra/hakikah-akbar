@@ -34,7 +34,7 @@ export const invitation = {
     timeLabel: "10.00 WITA - Selesai (Acara Siang)",
     place: "Kaluarrang, Desa Manjapai",
     region: "Kec. Bonto Nompo, Kab. Gowa",
-    mapsUrl: "", // TODO dari client
+    mapsUrl: "https://maps.app.goo.gl/RJw1eDPTfSxaEJnv5", // TODO dari client
   },
   closing: {
     lines: [
